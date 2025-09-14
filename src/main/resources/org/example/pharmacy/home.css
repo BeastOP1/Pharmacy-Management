@@ -1,0 +1,13 @@
+
+.-header {
+    -fx-background-color: linear-gradient(#ec1414, #e58131);
+}
+.-body {
+    -fx-background-color: white;
+}
+
+.-card{
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="565.0" prefWidth="674.0" stylesheets="@home.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pharmacy.Home">
+   <children>
+      <AnchorPane prefHeight="43.0" prefWidth="673.0" styleClass="-header">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="17.0" prefWidth="170.0" text=" 🏠 Dashboard" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Nova" size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <FlowPane hgap="12.0" layoutX="21.0" layoutY="56.0" prefHeight="72.0" prefWidth="638.0">
+         <children>
+            <Pane prefHeight="69.0" prefWidth="149.0" styleClass="-card">
+               <children>
+                  <Label layoutX="49.0" layoutY="13.0" text="Total Sales Today" />
+                  <Label layoutX="62.0" layoutY="35.0" text="\$ 1,2344.80">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="9.0" layoutY="12.0" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: darkgreen;" styleClass="-card" />
+               </children>
+            </Pane>
+            <Pane prefHeight="69.0" prefWidth="149.0" styleClass="-card">
+               <children>
+                  <Label layoutX="62.0" layoutY="13.0" text="Orders Today" />
+                  <Label layoutX="62.0" layoutY="35.0" text="18">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="13.0" layoutY="13.0" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: yellow;" styleClass="-card" />
+               </children>
+            </Pane>
+            <Pane layoutX="171.0" layoutY="10.0" prefHeight="69.0" prefWidth="149.0" styleClass="-card">
+               <children>
+                  <Label layoutX="62.0" layoutY="18.0" text="New Customers" />
+                  <Label layoutX="62.0" layoutY="35.0" text="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="14.0" layoutY="18.0" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: darkblue;" styleClass="-card" />
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="149.0" styleClass="-card">
+               <children>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="17.0" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: darkred;" styleClass="-card" />
+                  <Label layoutX="54.0" layoutY="17.0" text="Low Stock Alerts" />
+                  <Label layoutX="62.0" layoutY="35.0" text="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+      <FlowPane hgap="12.0" layoutX="18.0" layoutY="137.0" prefHeight="189.0" prefWidth="656.0">
+         <children>
+            <Pane prefHeight="179.0" prefWidth="314.0" styleClass="-card">
+               <children>
+                  <LineChart animated="false" layoutX="11.0" layoutY="29.0" prefHeight="126.0" prefWidth="301.0" title="Day" titleSide="BOTTOM">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis prefHeight="109.0" prefWidth="27.0" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Label layoutX="14.0" layoutY="14.0" text="Sales  Trends (/Days)" textAlignment="CENTER">
+                     <font>
+                        <Font name="DokChampa" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="179.0" prefWidth="312.0" styleClass="-card">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Top Medicines (Month)" textAlignment="CENTER">
+                     <font>
+                        <Font name="DokChampa" size="13.0" />
+                     </font>
+                  </Label>
+                  <BarChart alternativeColumnFillVisible="true" alternativeRowFillVisible="false" barGap="2.0" horizontalZeroLineVisible="false" layoutX="6.0" layoutY="32.0" prefHeight="134.0" prefWidth="301.0" title="Utitls Sold" titleSide="BOTTOM" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis prefHeight="109.0" prefWidth="33.0" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+      <FlowPane hgap="12.0" layoutX="18.0" layoutY="326.0" prefHeight="189.0" prefWidth="656.0">
+         <children>
+            <Pane prefHeight="228.0" prefWidth="314.0" styleClass="-card">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Recent Transcations" textAlignment="CENTER">
+                     <font>
+                        <Font name="DokChampa" size="13.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="14.0" layoutY="40.0" prefHeight="129.0" prefWidth="288.0">
+                    <columns>
+                      <TableColumn prefWidth="85.33334732055664" text="Invoice ID" />
+                      <TableColumn prefWidth="96.66667938232422" text="Time" />
+                        <TableColumn prefWidth="105.33332824707031" text="Amount" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="179.0" prefWidth="312.0" styleClass="-card">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Stock Expiring Soon 30days left" textAlignment="CENTER">
+                     <font>
+                        <Font name="DokChampa" size="13.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="12.0" layoutY="43.0" prefHeight="129.0" prefWidth="288.0">
+                     <columns>
+                        <TableColumn prefWidth="185.3333740234375" text="Medicine" />
+                        <TableColumn prefWidth="101.33331298828125" text="Date" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
